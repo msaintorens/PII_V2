@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+  </head>
+  <body>
+    <%- include('./partials/header') %>
+    <div class="d-flex flex-row">
+      <div class="margeHaut w-50"></div>
+      <div class="margeHautMauve w-50"></div>
+    </div>
+    <div class="d-flex flex-row">
+      <div class="fondBleu w-50">
+        <h1>Mon profil</h1>
+        <form class="inputProfile">
+          <div class="input-group mb-3 w-50">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Prénom"
+              aria-label="prenom"
+              required
+            />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nom"
+              aria-label="nom"
+              required
+            />
+          </div>
+
+          <div class="input-group mb-3 w-50">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Pays"
+              aria-label="pays"
+            />
+          </div>
+
+          <div class="input-group w-50">
+            <textarea
+              class="form-control"
+              placeholder="Description"
+              aria-label="description"
+            ></textarea>
+          </div>
+        </form>
+        <div id="btnEditerProfil">
+          <button href="/addVideo" class="btn btn-outline-light btn-sm">
+            <img src="./images/iconeStylo.png" />
+          </button>
+        </div>
+      </div>
+      <div class="fondMauve w-50">
+        <h1>Mes vidéos</h1>
+        <div id="modifMesVideo">
+          <a href="/addVideo" class="btn btn-outline-light btn-sm">
+            <img src="./images/iconePlus.png" />
+          </a>
+
+          <button class="btn btn-outline-light btn-sm" id="btnModifVideo">
+            <img src="./images/iconePointSuspension.png" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer><%- include('./partials/footer') %></footer>
+</html>
