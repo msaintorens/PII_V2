@@ -21,6 +21,7 @@ exports.createUser = (req, res, next) => {
       res.status(201).json({
         message: "Post saved successfully!",
       });
+      res.redirect("/");
     })
     .catch((error) => {
       res.status(400).json({

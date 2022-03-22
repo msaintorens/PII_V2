@@ -1,6 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
+const Videos = require("../controllers/videos");
+
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index");
@@ -8,7 +10,8 @@ router.get("/", function (req, res, next) {
 
 /* GET page toutes les vidéos. */
 router.get("/all_videos", function (req, res, next) {
-  res.render("all_videos");
+  let lesVideos = Videos.getAllVideos();
+  res.render("all_videos", { lesVideos });
 });
 
 /* GET page vidéos à la une. */
